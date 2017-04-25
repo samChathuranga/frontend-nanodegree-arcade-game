@@ -27,6 +27,8 @@ var Player = function (x, y, s) {
   this.x = x;
   this.y = y;
   this.s = s;
+
+  this.sprite = 'images/char-boy.png';
 };
 
 
@@ -38,7 +40,7 @@ Player.prototype = {
 
   },
   render: function () {
-
+    ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
   },
   handleInput: function () {
 
